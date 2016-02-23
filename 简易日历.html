@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>简易日历</title>
+		
+		<link href="zns_style.css" rel="stylesheet" type="text/css"/>
+		<script>
+			window.onload=function(){
+				var arr[]={
+					11111,
+					22222,
+					33333,
+					44444,
+					11111,
+					22222,
+					33333,
+					44444,
+					11111,
+					22222,
+					33333,
+					44444,
+				};
+				var oTab=document.getElementById('tab');
+				var oLi=oTab.getElementsTagName('li');
+				var oTxt=oTab.getElementsByTagName('div')[0];
+				for(var i=0; i<oLi.length; i++){
+					aLi[i].index=i;
+					aLi[i].onmousemove=function(){
+						for(var i=0; i<oLi.length; i++){
+							aLi[i].className='';
+						}
+						this.className='active';
+						oTxt.innerHtml='<h2>' + (this.index + 1) + '月活动</h2><p>'+ arr[this.index] + '</p>'
+					};
+					
+				}				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="tab" class="calendar">
+			<ul>
+				<li class="active"><h2>1</h2><P>JAN</P></li>
+				<li><h2>2</h2><P>FER</P></li>
+				<li><h2>3</h2><P>MAR</P></li>
+				<li><h2>4</h2><P>APR</P></li>
+				<li><h2>5</h2><P>MAY</P></li>
+				<li><h2>6</h2><P>JUN</P></li>
+				<li><h2>7</h2><P>JUL</P></li>
+				<li><h2>8</h2><P>AUG</P></li>
+				<li><h2>9</h2><P>SEP</P></li>
+				<li><h2>10</h2><P>OCT</P></li>
+				<li><h2>11</h2><P>NOV</P></li>
+				<li><h2>12</h2><P>DEC</P></li>
+			</ul>
+			<div class="text">
+				<!--<h2>1月活动</h2>
+				<p>快过年了，大家商量着去哪</p>	-->		
+			</div>
+		</div>
+		
+	</body>
+</html>
